@@ -1,8 +1,7 @@
-// 1 //
+// Day and Time //
 
 let now = new Date();
 let p = document.querySelector("p");
-
 let date = now.getDate();
 
 let days = [
@@ -42,9 +41,8 @@ if (minutes < 10) {
 
 p.innerHTML = `${day}, ${month} ${date}, ${hours}:${minutes}`;
 
-// 2 //
 
-// 3 //
+// Fahreneit //
 
 function convertToFahreineit(event) {
   event.preventDefault();
@@ -57,9 +55,8 @@ function convertToFahreineit(event) {
 let fahreneitLink = document.querySelector("#fahreneit");
 fahreneitLink.addEventListener("click", convertToFahreineit);
 
-// 4 //
+// Humidity and Wind //
 
-// 5 //
 function displayWeatherCondition(response) {
   console.log(response);
   document.querySelector("#city").innerHTML = response.data.name;

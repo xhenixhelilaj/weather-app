@@ -32,10 +32,10 @@
 
 .units {
   position: relative;
-  top: -32px;
-  font-size: 22px;
+  top: -85px;
+  left: 90px;
+  font-size: 25px;
 }
-
 .city-title {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
