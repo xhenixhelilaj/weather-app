@@ -14,19 +14,17 @@
     <title>Weather App</title>
 </head>
 
-<body>
+<body class="body">
     <div class="container">
         <form class="search-city" id="search-form">
-            <input class="enter-city shadow-sn" id="city-input" type="text" placeholder="Enter city name"
-                autocomplete="off" autofocus="on" />
+            <input class="btn btn-light" id="city-input" type="text" placeholder="Enter city name" autocomplete="off" autofocus="on" />
             <button type="submit" class="btn btn-light" id="search-icon">🔍</button>
         </form>
         <div class="container-first-part">
             <div class="row row-cols-3">
                 <div class="col">
                     <div class="temperature" id="temperature">
-                        <span class="temperature-number" id="temperature">13</span><span class="units"> °C | <a href="#"
-                                id="fahreneit">°F</a></span>
+                        13<span class="units"> °C | <a href="#" id="fahreneit">°F</a></span>
                     </div>
                 </div>
                 <div class="col">
@@ -50,15 +48,12 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div class="weather-info">
-                        <i class="fas fa-water" id="humidity"></i>
-                        <strong>Humidity
-                            <span id="humidity">32</span>%
-                        </strong>
-                        <br>
-                        <i class="fas fa-wind" id="wind"></i>
-                        <strong> Wind <span id="humidity">3</span> km/h
-                        </strong>
+                   <div class="weather-info">
+                    <i class="fas fa-water"></i>
+                     Humidity <span id="humidity">32</span>%
+                    <br>
+                    <i class="fas fa-wind"></i>
+                    Wind <span id="wind">3</span> km/h
                     </div>
                 </div>
                 <hr />
@@ -111,7 +106,7 @@
                     <h5>
                         TUE
                     </h5>
-                   <img src="weather images/fog.png" alt="">
+                   <img src="weather images/fog.png" alt="fog" id="fog">
                     <p><strong>
                             14°C
                         </strong></p>

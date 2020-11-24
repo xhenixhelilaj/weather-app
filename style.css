@@ -2,50 +2,32 @@
   background-color: rgba(255, 255, 255, 0.5);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
   padding: 20px;
-  margin-top: 24px;
-  padding: 20px;
-  max-width: 650px;
-  display: block;
+  margin-top: 20px;
   text-align: center;
   margin-bottom: 20px;
   height: 90vh;
 }
 
-body {
+.body {
+  margin-left: 250px;
+  margin-right: 250px;
   background-image: url(https://images3.alphacoders.com/685/685697.jpg);
   background-size: cover;
   background-position: center center;
-  background-attachment: fixed;
-  width: 100%;
-  display: block;
-  text-align: center;
 }
 
-.enter-city {
-  color: #537895;
+#city-input {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
-  padding: 4px 70px;
-  text-align: center;
+  padding: 4px 40px;
   border-radius: 12px;
-  border: 1.5px solid #294664;
-  margin-left: 37px;
-  display: inline;
-  box-shadow: 3px 3px 2px 2px rgba(0, 0, 0, 0.2);
-}
-
-.search-city {
-  max-width: 800px;
-}
-
-.container-first-part {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 .temperature {
-  margin-top: 120px;
-  margin-left: 50px;
   font-size: 74px;
+  text-align: center;
+  margin-top: 135px;
+  margin-left: 40px;
 }
 
 .units {
@@ -55,7 +37,6 @@ body {
 }
 
 .city-title {
-  text-align: center;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   font-weight: 800;
@@ -64,9 +45,10 @@ body {
 }
 
 p {
-  font-weight: 100;
-  margin-top: 1px;
-  text-align: center;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: 50;
+  margin-top: 4px;
 }
 
 .weather-info {
@@ -108,6 +90,7 @@ h2 {
 #fog {
   width: 60px;
 }
+
 #snow {
   width: 60px;
 }
