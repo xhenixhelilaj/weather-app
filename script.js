@@ -55,6 +55,7 @@ function convertToFahreineit(event) {
 let fahreneitLink = document.querySelector("#fahreneit");
 fahreneitLink.addEventListener("click", convertToFahreineit);
 
+
 // Humidity and Wind //
 
 function displayWeatherCondition(response) {
