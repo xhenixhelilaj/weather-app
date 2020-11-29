@@ -1,17 +1,21 @@
 // Day and Time //
 
-function formatDate (timestamp){
-  let date = new Date (timestamp);
-  let p = document.querySelector("p");
-  let days = ["Sunday",
+
+let now = new Date();
+let p = document.querySelector("p");
+let date = now.getDate();
+
+let days = [
+  "Sunday",
   "Monday",
   "Tuesday",
   "Wednesday",
   "Thursday",
   "Friday",
-  "Saturday"];
-  let day = days[date.getDay()];
-  let months = [
+  "Saturday"
+];
+let day = days[now.getDay()];
+let months = [
   "Jan",
   "Feb",
   "Mar",
@@ -24,39 +28,19 @@ function formatDate (timestamp){
   "Oct",
   "Nov",
   "Dec"
-  ];
-  let month = months[now.getMonth()];
-  let hours = date.getHours();
-  if (hours < 10) {
-    hours = `0 ${hours}`
-  };
-  let minutes = date.getMinutes();
-  if (minutes < 10) {
-    minutes = `0 ${minutes}`
-  };
+];
+let month = months[now.getMonth()];
 
-  p.innerHTML = `${day}, ${month} ${date}, ${hours}:${minutes}`;
+let hours = now.getHours();
+if (hours < 10) {
+  hours = `0${hours}`;
+}
+let minutes = now.getMinutes();
+if (minutes < 10) {
+  minutes = `0${minutes}`;
 }
 
-function displayTemperature (response) {
-  let temperatureInput = document.querySelector ("#temperature");
-  let cityInput = document.querySelector ("#city");
-  let descriptionInput = document.querySelector ("#description");
-  let humidityInput = document.querySelector("#humidity");
-  let windInput = document.querySelector("#wind");
-  let dateInput = document.querySelector ("#date");
-
-  temperatureInput.innerHTML= Math.round(response.data.main.temp):
-  cityInput.innerHTML = response.data.name;
-  descriptionInput.innerHTML = response.data.weather[0].description;
-  humidityInput.innerHTML = response.data.main.humidity;
-  windInput.innerHTML = response.data.wind.speed;
-  date.innerHTML = formatDate (response.data.dt*1000)
-}
-
-let apiKey = "4b314f77d77d39ad00e3f1ae01186f3d";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=London&appid=${apiKey}&units=metric`;
-axios.get(apiUrl).then(displayTemperature);
+p.innerHTML = `${day}, ${month} ${date}, ${hours}:${minutes}`;
 
 
 // Fahreneit //
