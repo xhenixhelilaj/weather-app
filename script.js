@@ -1,6 +1,4 @@
 // Day and Time //
-
-
 let now = new Date();
 let p = document.querySelector("p");
 let date = now.getDate();
@@ -48,15 +46,30 @@ p.innerHTML = `${day}, ${month} ${date}, ${hours}:${minutes}`;
 function convertToFahreineit(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
-  let temperature = temperatureElement.innerHTML;
-  let backroundImage = "https://image.shutterstock.com/image-photo/weather-forecast-background-climate-change-260nw-1124541077.jpg";
-  if (temperature > 7 === backroundImage)
-  temperature = Number(temperature);
-  temperatureElement.innerHTML = Math.round((temperature * 9) / 5 + 32);
+  let fahreneitTemperature =(celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahreneitTemperature);
+  
+  celsiusLink.classList.remove ("active");
+  fahreneitLink.classList.add ("active");
+};
+
+function convertToCelsius(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(clesiusTemperature);
+  
+  celsiusLink.classList.add ("active");
+  fahreneitLink.classList.remove ("active");
 }
 
-let fahreneitLink = document.querySelector("#fahreneit");
+let celsiusTemperature = null;
+
+let fahreneitLink = document.querySelector("#fahreneitLink");
 fahreneitLink.addEventListener("click", convertToFahreineit);
+
+let celsiusLink = document.querySelector("#celsiusLink");
+celsiusLink.addEventListener("click", convertToCelsius);
+
 
 
 // Humidity and Wind //
@@ -67,6 +80,8 @@ function displayWeatherCondition(response) {
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.main.temp
   );
+  celsiusTemperature = response.data.main.temp;
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
