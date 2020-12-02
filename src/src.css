@@ -1,0 +1,98 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url(https://images.alphacoders.com/201/thumb-1920-201751.jpg);
+  background-size: cover;
+  background-position: center center;
+}
+
+.container {
+  margin: 30px auto;
+  max-width: 800px;
+  text-align: center;
+  }
+
+.weather-app {
+
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.55);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: 90vh;
+}
+
+#city-input {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  padding: 4px 40px;
+  border-radius: 12px;
+}
+
+#search-icon {
+  padding: 5px 5px;
+  border: 0px;
+  background: transparent;
+}
+
+.search-form{
+  margin-bottom: 20px;
+}
+
+h1{
+  color: black;
+  font-size: 50px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 0;
+
+}
+
+#date{
+  margin-top: 0 auto;
+}
+
+img{
+  width: 125px;
+
+}
+
+.weather-icon{
+  margin-bottom: 15px;
+  position: relative;
+  top: -10px;
+}
+
+#weather-app-center{
+  margin-top: 40px;
+  margin-left: 20px;
+  margin-bottom: 35px;
+  margin-right: 20px;
+}
+
+li{
+  list-style: none;
+  color: black;
+  font-size: 20px;
+  position: relative;
+  top: 20px;
+}
+
+#temperature-number {
+    font-size: 64px;
+}
+.units {
+    position: relative;
+    font-size: 25px;
+    top: -34px;
+    left: -8px;
+}
+
+#humidity{
+  font-weight: 600 ;
+}
+
+#wind{
+  font-weight: 600 ;
+}
