@@ -1,18 +1,17 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background-image: url(https://images.alphacoders.com/201/thumb-1920-201751.jpg);
+  background-image: url(https://images.unsplash.com/photo-1544392827-1fc9d8111cb1?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=701&q=80);
   background-size: cover;
   background-position: center center;
 }
 
 .container {
   margin: 30px auto;
-  max-width: 800px;
+  max-width: 400px;
   text-align: center;
-  }
+}
 
 .weather-app {
-
   border-radius: 5px;
   background-color: rgba(255, 255, 255, 0.55);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
@@ -35,43 +34,42 @@ body {
   background: transparent;
 }
 
-.search-form{
+.search-form {
   margin-bottom: 20px;
 }
 
-h1{
+h1 {
   color: black;
   font-size: 50px;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   font-weight: 800;
   text-transform: uppercase;
   margin-bottom: 0;
-
 }
 
-#date{
+#date {
   margin-top: 0 auto;
 }
 
-img{
+img {
   width: 125px;
-
 }
 
-.weather-icon{
+.weather-icon {
   margin-bottom: 15px;
   position: relative;
   top: -10px;
 }
 
-#weather-app-center{
+#weather-app-center {
   margin-top: 40px;
   margin-left: 20px;
   margin-bottom: 35px;
   margin-right: 20px;
 }
 
-li{
+li {
   list-style: none;
   color: black;
   font-size: 20px;
@@ -80,19 +78,23 @@ li{
 }
 
 #temperature-number {
-    font-size: 64px;
+  font-size: 64px;
 }
 .units {
-    position: relative;
-    font-size: 25px;
-    top: -34px;
-    left: -8px;
+  position: relative;
+  font-size: 25px;
+  top: -34px;
+  left: -8px;
 }
 
-#humidity{
-  font-weight: 600 ;
+#humidity {
+  font-weight: 600;
 }
 
-#wind{
-  font-weight: 600 ;
+#wind {
+  font-weight: 600;
+}
+
+#link {
+  font-size: 24px;
 }
