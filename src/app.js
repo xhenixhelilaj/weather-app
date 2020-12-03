@@ -42,12 +42,12 @@ function displayForecast(response){
     let forecast = null;
     forecastElement.innerHTML = null;
 
-    for (let index = 0; index < 6; index++) {
+    for (let index = 0; index < 4; index++) {
         let forecast = response.data.list[index];
         forecastElement.innerHTML += `
-        <div class="col-2">
+        <div class="col">
           <h3>
-             ${formatHours(forecast.dt*1000)}
+          <small>${formatHours(forecast.dt*1000)}</small>
           </h3>
           <div class="weather-forecast-temperature">
              <strong>${Math.round(forecast.main.temp_max)}°</strong> ${Math.round(forecast.main.temp_min)}°
