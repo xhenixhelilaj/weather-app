@@ -48,7 +48,7 @@ function displayForecast(response){
     for (let index = 0; index < 4; index++) {
         let forecast = response.data.list[index];
         forecastElement.innerHTML += `
-        <div class="col">
+        <div class="col-3">
           <h3>
           <small>${formatHours(forecast.dt*1000)}</small>
           </h3>
