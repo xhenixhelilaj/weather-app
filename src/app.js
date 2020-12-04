@@ -2,6 +2,7 @@ function formatDate (timestamp){
 let date = new Date(timestamp);
 let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 let day = days[date.getDay()];
+
 return `${day} ${formatHours (timestamp)}`
 }
 
@@ -22,26 +23,28 @@ function formatHours (timestamp){
 function displayTemperature (response){
     let cityElement = document.querySelector ("#city");
     let temperatureNumberElement = document.querySelector("#temperature-number");
-    let descriptionElement = document.querySelector("#description");
     let humidityElement = document.querySelector ("#humidity");
     let windElement = document.querySelector ("#wind");
     let dateElement = document.querySelector ("#date");
+    let iconElement = document.querySelector ("#icon");
 
     celsiusTemperature = response.data.main.temp;
 
     cityElement.innerHTML= response.data.name;
     temperatureNumberElement.innerHTML= Math.round(response.data.main.temp); 
-    descriptionElement.innerHTML = response.data.weather[0].main;
+    dateElement.innerHTML = formatDate (response.data.dt * 1000);
     humidityElement.innerHTML = response.data.main.humidity;
     windElement.innerHTML = Math.round(response.data.wind.speed);
-    dateElement.innerHTML = formatDate (response.data.dt * 1000);
+    iconElement.setAttribute(
+        "src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    )
 }
 
 function displayForecast(response){
     let forecastElement = document.querySelector("#forecast");
     let forecast = null;
     forecastElement.innerHTML = null;
-
+   
     for (let index = 0; index < 4; index++) {
         let forecast = response.data.list[index];
         forecastElement.innerHTML += `
@@ -49,6 +52,7 @@ function displayForecast(response){
           <h3>
           <small>${formatHours(forecast.dt*1000)}</small>
           </h3>
+          <img src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png" id="icon" />
           <div class="weather-forecast-temperature">
              <strong>${Math.round(forecast.main.temp_max)}°</strong> ${Math.round(forecast.main.temp_min)}°
           </div>
@@ -104,3 +108,8 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 search("New Delhi")
+
+
+//
+
+
