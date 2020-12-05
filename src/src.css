@@ -2,28 +2,25 @@ body {
   background-image: url(https://images.unsplash.com/photo-1542461927-dd68c85adc56?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxleHBsb3JlLWZlZWR8NjZ8fHxlbnwwfHx8&auto=format&fit=crop&w=600&q=60);
   background-size: cover;
   background-position: center center;
-  font-family: 'Raleway', sans-serif;
-
+  font-family: "Raleway", sans-serif;
 }
 
-.container {
-  margin: 30px auto;
-  max-width: 350px;
-  text-align: center;
-}
 
 .weather-app {
+  display: block;
+  margin: 0 auto;
+  max-width: 350px;
   border-radius: 5px;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255 , 0.85) ;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
   padding: 20px;
+  padding-bottom: 0;
   margin-top: 20px;
   margin-bottom: 20px;
-  height: 90vh;
+  
 }
 
 #city-input {
- 
   padding: 4px 40px;
   border-radius: 12px;
 }
@@ -32,94 +29,111 @@ body {
   padding: 5px 5px;
   border: 0px;
   background: transparent;
+  
 }
 
 .search-form {
   margin-bottom: 20px;
+  text-align: center;
 }
 
 h1 {
-  color: black;
+  
   font-size: 20px;
   text-transform: uppercase;
   margin-bottom: 10px;
   position: relative;
   top: -80px;
   font-weight: 600;
+  text-align: center;
 }
 
 #date {
   margin-top: 0 auto;
+  text-align: center;
 }
 
 img {
-  width: 70px;
+  width: 77px;
+  display: block;
+  margin: 0 auto;
+
+
 }
 
 .weather-icon {
   margin-bottom: 15px;
   position: relative;
   top: -10px;
+  display: block;
+  margin: 0 auto;
 }
 
 #weather-app-center {
-  margin-top: 35px;
+  
   margin-left: 20px;
   margin-right: 20px;
   position: relative;
-  
 }
-.temperature{
+.temperature {
   position: relative;
   top: -50px;
-  left: 75px;
-  
+  left: 78.5px;
 }
 
-.temperature .active{
+.temperature .active {
   color: black;
   cursor: default;
 }
 
-.temperature .active:hover{
+.temperature .active:hover {
   text-decoration: none;
-  
 }
 
 #temperature-number {
-  font-size: 75px;
+  font-size: 87px;
   position: relative;
   top: -20px;
-  
 }
 .units {
   position: relative;
   top: -35px;
+  right: -22px;
+  text-align: center;
+  font-weight: 600;
 }
 
 .humidity {
   font-weight: 600;
-    position: relative;
+  position: relative;
   top: -165.5px;
-  right: -165px;
+  right: -198px;
+  
+}
 
+.humidity-number{
+  position: relative;
+  right: -12px;
 }
 
 .wind {
   font-weight: 600;
   position: relative;
-  left: -30px;
-  
-  
+  left: -10px;
+  top: 20px;
 }
 
-#link {
-  font-size: 24px;
+.link {
+  font-size: 14px;
+  position: relative;
+  top: -20px;
+  right: -55px;
+  font-weight: 600;
 }
 
-#forecast{
+#forecast {
   position: relative;
   top: -60px;
   left: -5px;
-
+  text-align: center;
 }

@@ -110,6 +110,7 @@ celsiusLink.addEventListener("click", displayCelsiusTemperature);
 search("New Delhi")
 
 
+
 //
 
 
