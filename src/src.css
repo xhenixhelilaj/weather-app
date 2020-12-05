@@ -1,9 +1,14 @@
 body {
   background-image: url(https://images.unsplash.com/photo-1542461927-dd68c85adc56?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxleHBsb3JlLWZlZWR8NjZ8fHxlbnwwfHx8&auto=format&fit=crop&w=600&q=60);
+  background-size: cover;
   background-position: center center;
   font-family: "Raleway", sans-serif;
 }
 
+.wrapper{
+  display: block;
+  margin: 0 auto;
+}
 
 .weather-app {
   display: block;
